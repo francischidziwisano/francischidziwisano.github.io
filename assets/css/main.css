@@ -648,6 +648,18 @@ section,
   line-height: 0;
 }
 
+.about-card{
+  /* margin-left: 5px; */
+  padding: 10px;
+  border: solid  2px #149ddd;
+  border-radius: 10px;
+  /* background-color: #a8a9b4; */
+}
+
+.about-card-title{
+  text-underline-offset: 10px;
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -914,6 +926,13 @@ section,
   color: var(--contrast-color);
   font-size: 24px;
   line-height: 0;
+}
+
+.icon{  
+  color: var(--accent-color);
+  font-size: 36px;
+  line-height: 0;
+  padding: 10px;
 }
 
 .services .service-item:hover .icon {
