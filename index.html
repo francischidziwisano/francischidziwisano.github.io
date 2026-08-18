@@ -1,732 +1,2870 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio | Francis Chidziwisano</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Favicons -->
-  <link href="assets/img/img/my-profile-img.jpg" rel="icon">
-  <link href="assets/img/my-profile-img.jpg" rel="apple-touch-icon">
+  <title>Francis Chidziwisano · Data & M&E Professional</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Francis Chidziwisano — Data Management, Monitoring & Evaluation, Data Analytics and Digital Solutions professional with over 10 years of experience."
+  />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+
+    /* =========================================================
+       ROOT VARIABLES
+    ========================================================= */
+
+    :root {
+      --primary: #173f63;
+      --primary-dark: #0c2b47;
+      --primary-light: #eaf3fb;
+
+      --accent: #1596a8;
+      --accent-light: #e7f7f8;
+
+      --navy: #081d2f;
+      --text: #1b3045;
+      --muted: #60758a;
+
+      --background: #f6f9fc;
+      --white: #ffffff;
+
+      --border: #e2eaf1;
+      --border-dark: #cddbe7;
+
+      --shadow-sm: 0 5px 20px rgba(8, 29, 47, 0.05);
+      --shadow-md: 0 15px 40px rgba(8, 29, 47, 0.08);
+      --shadow-lg: 0 25px 60px rgba(8, 29, 47, 0.12);
+
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --radius-pill: 100px;
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Space Grotesk", "Inter", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+
+    /* =========================================================
+       CONTAINER
+    ========================================================= */
+
+    .container {
+      width: min(1200px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      background: var(--primary);
+      color: white;
+
+      font-weight: 600;
+
+      padding: 13px 30px;
+
+      border-radius: var(--radius-pill);
+
+      border: 1px solid var(--primary);
+
+      transition: all 0.3s ease;
+
+      box-shadow: 0 8px 22px rgba(23, 63, 99, 0.16);
+
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+
+      transform: translateY(-3px);
+
+      box-shadow: 0 15px 30px rgba(23, 63, 99, 0.22);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      background: transparent;
+      color: var(--primary);
+
+      font-weight: 600;
+
+      padding: 11px 28px;
+
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--primary);
+
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(255, 255, 255, 0.94);
+
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(226, 234, 241, 0.9);
+
+      box-shadow: 0 3px 18px rgba(8, 29, 47, 0.035);
+    }
+
+    .navbar .container {
+      min-height: 76px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-weight: 700;
+      font-size: 1.35rem;
+
+      color: var(--navy);
+
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      display: inline-block;
+
+      margin-left: 7px;
+
+      padding: 4px 11px;
+
+      border-radius: var(--radius-pill);
+
+      color: var(--primary);
+
+      background: var(--primary-light);
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 0.72rem;
+      font-weight: 700;
+
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+
+      gap: 30px;
+
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #40576c;
+
+      font-size: 0.88rem;
+
+      font-weight: 500;
+
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links .btn-nav {
+      background: var(--primary);
+
+      color: white;
+
+      padding: 9px 20px;
+
+      border-radius: var(--radius-pill);
+
+      font-weight: 600;
+    }
+
+    .nav-links .btn-nav:hover {
+      color: white;
+      background: var(--primary-dark);
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+
+      padding: 82px 0 90px;
+
+      background:
+        radial-gradient(
+          circle at 90% 15%,
+          rgba(21, 150, 168, 0.10),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #eef5fa 0%,
+          #ffffff 55%,
+          #f3f8fb 100%
+        );
+
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(23, 63, 99, 0.06);
+
+      right: -220px;
+      top: -180px;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 350px;
+      height: 350px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(21, 150, 168, 0.06);
+
+      left: -220px;
+      bottom: -200px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .hero-content {
+      animation: heroContent 0.8s ease both;
+    }
+
+    @keyframes heroContent {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 7px 15px;
+
+      border-radius: var(--radius-pill);
+
+      background: rgba(23, 63, 99, 0.06);
+
+      border: 1px solid rgba(23, 63, 99, 0.08);
+
+      color: var(--primary);
+
+      font-size: 0.78rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.2px;
+
+      margin-bottom: 18px;
+    }
+
+    .hero-tagline i {
+      color: var(--accent);
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 5vw, 4.3rem);
+
+      line-height: 1.08;
+
+      letter-spacing: -2px;
+
+      font-weight: 800;
+
+      color: var(--navy);
+
+      margin-bottom: 16px;
+    }
+
+    .hero-content h1 .highlight {
+      position: relative;
+
+      color: var(--primary);
+
+      background: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 15%,
+        rgba(21, 150, 168, 0.13) 15%,
+        rgba(21, 150, 168, 0.13) 100%
+      );
+
+      padding-right: 8px;
+    }
+
+    .hero-desc {
+      max-width: 590px;
+
+      color: #50677b;
+
+      font-size: 1.03rem;
+
+      line-height: 1.8;
+
+      margin-bottom: 28px;
+    }
+
+    .hero-desc strong {
+      color: var(--navy);
+    }
+
+    .hero-actions {
+      display: flex;
+
+      gap: 13px;
+
+      flex-wrap: wrap;
+
+      margin-bottom: 35px;
+    }
+
+    .hero-stats {
+      display: flex;
+
+      gap: 0;
+
+      border-top: 1px solid rgba(23, 63, 99, 0.10);
+
+      padding-top: 24px;
+    }
+
+    .hero-stats div {
+      min-width: 120px;
+
+      padding-right: 25px;
+
+      margin-right: 25px;
+
+      border-right: 1px solid rgba(23, 63, 99, 0.10);
+    }
+
+    .hero-stats div:last-child {
+      border-right: none;
+    }
+
+    .hero-stats strong {
+      display: block;
+
+      font-family: "Space Grotesk";
+
+      font-size: 1.65rem;
+
+      color: var(--navy);
+
+      line-height: 1.2;
+    }
+
+    .hero-stats span {
+      display: block;
+
+      margin-top: 4px;
+
+      color: #73879a;
+
+      font-size: 0.76rem;
+
+      font-weight: 500;
+    }
+
+
+    /* =========================================================
+       HERO IMAGE
+    ========================================================= */
+
+    .hero-image {
+      position: relative;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image::before {
+      content: "";
+
+      position: absolute;
+
+      width: 410px;
+      height: 410px;
+
+      border-radius: 50%;
+
+      background: linear-gradient(
+        145deg,
+        rgba(23, 63, 99, 0.12),
+        rgba(21, 150, 168, 0.05)
+      );
+
+      z-index: 0;
+    }
+
+    .hero-image .profile-img {
+      position: relative;
+      z-index: 2;
+
+      width: 370px;
+      height: 370px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      border: 7px solid white;
+
+      box-shadow:
+        0 25px 55px rgba(8, 29, 47, 0.16),
+        0 0 0 1px rgba(23, 63, 99, 0.05);
+
+      background: #dce7f0;
+    }
+
+    .floating-badge {
+      position: absolute;
+      z-index: 4;
+
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 11px 17px;
+
+      border-radius: var(--radius-pill);
+
+      background: white;
+
+      box-shadow: var(--shadow-md);
+
+      border: 1px solid rgba(226, 234, 241, 0.8);
+
+      font-size: 0.78rem;
+
+      font-weight: 700;
+
+      color: var(--navy);
+
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    .badge-1 {
+      top: 13%;
+      right: 0;
+    }
+
+    .badge-2 {
+      bottom: 13%;
+      left: 0;
+
+      background: var(--primary);
+
+      color: white;
+
+      border-color: var(--primary);
+    }
+
+    .badge-2 i {
+      color: #65d3dd;
+    }
+
+
+    /* =========================================================
+       SHARED SECTION STYLING
+    ========================================================= */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      text-align: center;
+
+      max-width: 760px;
+
+      margin: 0 auto 50px;
+    }
+
+    .section-title .overline {
+      display: inline-flex;
+      align-items: center;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      padding: 5px 14px;
+
+      border-radius: var(--radius-pill);
+
+      font-size: 0.7rem;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 13px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+
+      line-height: 1.15;
+
+      letter-spacing: -1.2px;
+
+      color: var(--navy);
+
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+
+      font-size: 0.98rem;
+
+      max-width: 680px;
+
+      margin: auto;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    #about {
+      background: white !important;
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .about-card {
+      position: relative;
+
+      background: white;
+
+      padding: 31px 26px;
+
+      border-radius: var(--radius-md);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow-sm);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+      overflow: hidden;
+    }
+
+    .about-card::after {
+      content: "";
+
+      position: absolute;
+
+      width: 100px;
+      height: 100px;
+
+      right: -50px;
+      bottom: -50px;
+
+      border-radius: 50%;
+
+      background: var(--primary-light);
+
+      opacity: 0;
+
+      transition: 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-7px);
+
+      border-color: #c9dce9;
+
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-card:hover::after {
+      opacity: 1;
+    }
+
+    .about-card .icon {
+      position: relative;
+      z-index: 2;
+
+      width: 54px;
+      height: 54px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 15px;
+
+      color: var(--primary);
+
+      background: var(--primary-light);
+
+      margin-bottom: 18px;
+
+      font-size: 1.3rem;
+    }
+
+    .about-card h3 {
+      position: relative;
+      z-index: 2;
+
+      font-size: 1.1rem;
+
+      margin-bottom: 9px;
+
+      color: var(--navy);
+    }
+
+    .about-card p {
+      position: relative;
+      z-index: 2;
+
+      color: var(--muted);
+
+      font-size: 0.88rem;
+
+      line-height: 1.75;
+    }
+
+    .about-card .link-list {
+      position: relative;
+      z-index: 3;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 19px;
+    }
+
+    .about-card .link-list a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+
+      color: var(--primary);
+
+      background: var(--primary-light);
+
+      padding: 6px 10px;
+
+      border-radius: 8px;
+
+      font-size: 0.72rem;
+
+      font-weight: 700;
+
+      border: none;
+
+      margin: 0;
+
+      transition: 0.2s;
+    }
+
+    .about-card .link-list a:hover {
+      background: var(--primary);
+
+      color: white;
+    }
+
+
+    /* =========================================================
+       RESUME
+    ========================================================= */
+
+    #resume {
+      background: var(--background) !important;
+    }
+
+    .resume-grid {
+      display: grid;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: 32px;
+    }
+
+    .resume-block h3 {
+      display: flex;
+      align-items: center;
+
+      font-size: 1.35rem;
+
+      color: var(--navy);
+
+      margin-bottom: 20px;
+
+      padding-bottom: 13px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .resume-block h3 i {
+      color: var(--primary) !important;
+
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--primary-light);
+
+      border-radius: 10px;
+
+      margin-right: 11px !important;
+
+      font-size: 0.95rem;
+    }
+
+    .exp-item {
+      background: white;
+
+      padding: 22px 23px;
+
+      border-radius: var(--radius-md);
+
+      margin-bottom: 15px;
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow-sm);
+
+      transition: 0.25s ease;
+    }
+
+    .exp-item:hover {
+      transform: translateX(4px);
+
+      border-color: #c5d9e8;
+
+      box-shadow: var(--shadow-md);
+    }
+
+    .exp-item h4 {
+      font-size: 1rem;
+
+      font-weight: 700;
+
+      color: var(--navy);
+
+      margin-bottom: 5px;
+    }
+
+    .exp-item .meta {
+      display: flex;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+
+      font-size: 0.72rem;
+
+      color: #708498;
+
+      margin-bottom: 10px;
+    }
+
+    .exp-item .meta i {
+      margin-right: 4px;
+
+      color: var(--accent);
+    }
+
+    .exp-item ul {
+      padding-left: 17px;
+
+      color: #50677b;
+
+      font-size: 0.81rem;
+    }
+
+    .exp-item ul li {
+      margin-bottom: 5px;
+    }
+
+    .exp-item ul li::marker {
+      color: var(--accent);
+    }
+
+
+    /* =========================================================
+       EXPERIENCE IMPACT TAGS
+    ========================================================= */
+
+    .impact-tags {
+      display: flex;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+
+      margin-top: 12px;
+    }
+
+    .impact-tag {
+      padding: 4px 9px;
+
+      border-radius: 6px;
+
+      background: var(--accent-light);
+
+      color: #157582;
+
+      font-size: 0.66rem;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    #skills {
+      background: white !important;
+    }
+
+    .skills-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .skill-card {
+      position: relative;
+
+      background: white;
+
+      padding: 26px 20px;
+
+      border-radius: var(--radius-md);
+
+      text-align: center;
+
+      border: 1px solid var(--border);
+
+      transition: 0.3s ease;
+
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 3px;
+
+      background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--accent)
+      );
+
+      transform: scaleX(0);
+
+      transform-origin: left;
+
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow: var(--shadow-md);
+
+      border-color: #cbdce8;
+    }
+
+    .skill-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .skill-card i {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 54px;
+      height: 54px;
+
+      font-size: 1.35rem;
+
+      color: var(--primary);
+
+      background: var(--primary-light);
+
+      border-radius: 15px;
+
+      margin-bottom: 13px;
+    }
+
+    .skill-card h4 {
+      font-size: 0.98rem;
+
+      color: var(--navy);
+
+      margin-bottom: 5px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+
+      font-size: 0.79rem;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       SKILL TAGS
+    ========================================================= */
+
+    .skill-tags {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 6px;
+
+      flex-wrap: wrap;
+
+      margin-top: 12px;
+    }
+
+    .skill-tag {
+      padding: 4px 8px;
+
+      background: #f3f7fa;
+
+      border-radius: 6px;
+
+      color: #587083;
+
+      font-size: 0.61rem;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    #contact {
+      background: var(--background) !important;
+    }
+
+    .contact-wrap {
+      display: grid;
+
+      grid-template-columns: 0.85fr 1.15fr;
+
+      gap: 40px;
+
+      background: white;
+
+      padding: 42px;
+
+      border-radius: var(--radius-lg);
+
+      box-shadow: var(--shadow-md);
+
+      border: 1px solid var(--border);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .contact-wrap::before {
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      border-radius: 50%;
+
+      background: var(--primary-light);
+
+      right: -120px;
+      top: -120px;
+    }
+
+    .contact-info {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-info h3 {
+      font-size: 1.4rem;
+
+      color: var(--navy);
+
+      margin-bottom: 20px;
+    }
+
+    .contact-intro {
+      color: var(--muted);
+
+      font-size: 0.87rem;
+
+      margin-bottom: 23px;
+    }
+
+    .contact-info .info-item {
+      display: flex;
+
+      gap: 14px;
+
+      margin-bottom: 18px;
+
+      align-items: flex-start;
+    }
+
+    .contact-info .info-item i {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background: var(--primary-light);
+
+      color: var(--primary);
+
+      font-size: 0.95rem;
+
+      flex-shrink: 0;
+    }
+
+    .contact-info .info-item p {
+      color: #40576c;
+
+      font-weight: 500;
+
+      font-size: 0.82rem;
+
+      padding-top: 5px;
+    }
+
+    .contact-socials {
+      margin-top: 25px;
+
+      display: flex;
+
+      gap: 9px;
+    }
+
+    .contact-socials a {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      background: #edf4f9;
+
+      padding: 9px 14px;
+
+      border-radius: var(--radius-pill);
+
+      font-size: 0.72rem;
+
+      font-weight: 700;
+
+      color: var(--primary);
+
+      transition: 0.2s;
+    }
+
+    .contact-socials a:hover {
+      background: var(--primary);
+
+      color: white;
+    }
+
+    .contact-form {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+
+      padding: 13px 16px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 11px;
+
+      font-family: inherit;
+
+      font-size: 0.86rem;
+
+      margin-bottom: 13px;
+
+      transition: 0.2s;
+
+      background: #fbfdff;
+
+      color: var(--text);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+
+      border-color: var(--accent);
+
+      background: white;
+
+      box-shadow: 0 0 0 3px rgba(21, 150, 168, 0.08);
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+
+      min-height: 125px;
+    }
+
+    .contact-form .btn-primary {
+      width: 100%;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .footer {
+      background: var(--navy);
+
+      padding: 30px 0;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+      text-align: center;
+
+      color: #91a5b7;
+
+      font-size: 0.78rem;
+    }
+
+    .footer span {
+      font-weight: 700;
+
+      color: white;
+    }
+
+    .footer i {
+      color: #65cbd3 !important;
+    }
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(25px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 992px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+      }
+
+      .hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-image {
+        margin-top: 20px;
+      }
+
+      .about-grid,
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-badge {
+        display: none;
+      }
+    }
+
+
+    @media (max-width: 680px) {
+
+      .container {
+        width: min(100% - 30px, 1200px);
+      }
+
+      .navbar .container {
+        min-height: 68px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-content h1 {
+        font-size: 2.55rem;
+
+        letter-spacing: -1.5px;
+      }
+
+      .hero-desc {
+        font-size: 0.91rem;
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+
+        width: 100%;
+      }
+
+      .hero-stats div {
+        min-width: 95px;
+
+        margin: 0;
+
+        padding: 0;
+
+        border: none;
+      }
+
+      .hero-stats strong {
+        font-size: 1.45rem;
+      }
+
+      .hero-image .profile-img {
+        width: 285px;
+        height: 285px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .section-title {
+        margin-bottom: 35px;
+      }
+
+      .section-title h2 {
+        font-size: 1.9rem;
+      }
+
+      .about-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-wrap {
+        padding: 25px 20px;
+
+        border-radius: 22px;
+      }
+
+      .contact-socials {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+    }
+
+
+    @media (max-width: 460px) {
+
+      .navbar .container {
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+
+        gap: 8px 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.75rem;
+      }
+
+      .nav-links .btn-nav {
+        padding: 7px 13px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.15rem;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .hero-actions a {
+        width: 100%;
+      }
+
+      .hero-stats {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+  </style>
 </head>
 
-<body class="index-page">
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+<body>
 
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Francis Chidziwisano</h1>
-    </a>
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================= -->
 
-    <div class="social-links text-center">
-      <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
-      <a href="https://web.facebook.com/francis.chidziwisano" class="facebook"><i class="bi bi-facebook"></i></a>
-      <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
-      <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
-      <a href="https://www.linkedin.com/in/francis-chidziwisano-44a73733/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <!-- <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li> -->
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Core Competency</a></li>
-        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <p>I'm</p>
-        <h2>Francis Chidziwisano</h2>
-        <p><span class="typed" data-typed-items="Data Management, Monitoring and Evaluation, Front-End, Website Development"> Management Information Systems </span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>
-          I am a seasoned data management, monitoring and evaluation and software development professional with over 10 years of experience in analytics, M&E, and software solutions. I’ve had the privilege of working with notable organizations like UNDP, various USAID implementing partners, and the Ministry of Health, where I've helped design data-driven solutions to inform policy and improve public services.
-
-          In my career, I've led impactful projects, including developing dashboards for health, nutrition, WASH, agriculture and disaster interventions in Malawi. I’m skilled in tools like Power BI, Python, and database management techniques, which I use to transform complex datasets into actionable insights.
-          
-          I’m passionate about using data to drive change and make a positive impact. When I’m not working, you can find me chatting, playing games or exploring new tech innovations.
-          
-          Let’s connect! If you're interested in collaborating or learning more, feel free to reach out.
-        </p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row py-4 justify-content-center">
-          <div class="col-lg-3 content about-card">
-            <div class="d-flex justify-content-center icon"><i class="bi bi-globe-europe-africa"></i></div>
-            <h2 class="text-center about-card-title text-decoration-underline"> What I Care About </h2>
-            <p class="fst-italic py-3">I care deeply about building tools and systems that <strong>improve access to health services</strong>, <strong>streamline development
-            work</strong>, and <strong>amplify data for good</strong>. Whether it’s developing a web-based dashboard for policy monitoring or cleaning messy
-            data to tell a compelling story — I bring both technical expertise and human-centered design to the table. </p>
-          </div>
-          <div class="col-lg-1"></div>
-          <div class="col-lg-3 content about-card">
-            <div class="d-flex justify-content-center icon"><i class="bi bi-bullseye"></i></div>
-            <h2 class="text-center about-card-title text-decoration-underline"> Career Goals </h2>
-            <p class="fst-italic py-3">
-              I'm actively exploring new opportunities where I can contribute to data-driven decision-making, lead M&E system
-              innovations, or help design impactful digital solutions in the development sector. I’m especially interested in roles
-              that combine data, policy, and technology.
-            </p>
-          </div>
-          <div class="col-lg-1"></div>
-          <div class="col-lg-3 content about-card">
-            <div class="d-flex justify-content-center icon"><i class="bi bi-link"></i></div>
-            <h2 class="text-center about-card-title text-decoration-underline"> Let's Connect </h2>
-            <p class="fst-italic py-3">
-              If you’re looking for someone to help you build a digital solution, clean and visualize data, or collaborate on your
-              next tech-for-development project — I’m available for short- and long-term opportunities.
-              </p>
-              <p>
-                📧 Reach me at: <a href="mailto:your-email@example.com">franchidzi@gmail.com</a><br>
-                🔗 Find me on
-                <a href="#" target="_blank">LinkedIn</a> |
-                <a href="#" target="_blank">GitHub</a>
-              </p>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <!-- <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-              <p><span><strong>Years</strong></span> <span>Experience</span></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>Completed</span></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Trained</strong> <span>on Data Management</span></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="200000" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Records</strong> <span>Managed across 8 districts</span></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div> 
-
-    </section>-->
-    <!-- /Stats Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Data Management and Software Development Professional with over 10 years of experience across diverse sectors, including health, 
-          disaster management, nutrition, WASH, agriculture, and several other NGO programs. Skilled in designing and implementing data and M&E solutions that enhance organizational efficiency 
-          and data-driven decision-making. Proficient in data analysis, visualization, and monitoring & evaluation, with hands-on expertise 
-          in Power BI, Python, KoboToolBox, ODK Central, Tableau, MongoDB, SQL, and MS Access. Experienced in full-stack web development, specializing in JavaScript, Python, and PHP, with a 
-          focus on user-centered design. Recognized for successfully leading data management and M&E activities, creating interactive dashboards, and collaborating 
-          with stakeholders to develop scalable, impactful solutions. Committed to continuous improvement, strategic planning, and fostering 
-          data integrity to support organizational goals.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Francis Chidziwisano</h4>
-              <p><em>Information Technology (IT) professional with vital experience in management information systems and M&E systems gained from the Ministry of Health, Department of Disaster Management Affairs (DoDMA) and Non-Governmental Organizations such as Feed the Children, Save the Children, UNDP, Kuunika Project, Baylor College of Medicine and Medecines Sans Frontiers. A holder of a Bachelor of Science degree in Business and Information Technology from the National College of Information Technology.</em></p>
-              <!-- <ul>
-                <li>Lilongwe</li>
-                <li>(265) 888 394 136</li>
-                <li>franchidzi@gmail.com</li>
-              </ul> -->
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor Science Degree in Information Technology</h4>
-              <h5>2015 - 2017</h5>
-              <p><em>National College of information Technology</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Advanced Diploma in Computing</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>National College of information Technology</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Diploma in Computing</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>National College of information Technology</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Other Certificates</h3>
-
-            <div class="resume-item">
-              <h4>Applied Data Science</h4>
-              <h5> In Progress </h5>
-              <p><em> SimplyLearn or SkillUp </em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Machine Learning Using Python</h4>
-              <h5> December 2024</h5>
-              <p><em> SimplyLearn or SkillUp</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>PostGres SQL</h4>
-              <h5> September 2023</h5>
-              <p><em> SimplyLearn or SkillUp</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Data Science with Python</h4>
-              <h5> March 2023</h5>
-              <p><em> SimplyLearn or SkillUp</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Data Visualizations Using Tableau</h4>
-              <h5> Jun 2023</h5>
-              <p><em> SimplyLearn or SkillUp</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Data Visualizations</h4>
-              <h5> January 2022</h5>
-              <p><em> SimplyLearn or SkillUp</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>CRUD Operations in MongoDB</h4>
-              <h5> November 2021</h5>
-              <p><em> SimplyLearn or SkillUp</em></p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Data Management Officer</h4>
-              <h5>February 2024 - March 2025</h5>
-              <p><em>Feed the Children </em></p>
-              <ul>
-                <li>Designed, developed and maintained interactive BI dashboards in Power BI and Qlik Sense to monitor key performance indicators and support real-time decision-making. </li>
-                <li>Automated data extraction, cleaning, and transformation pipelines using Python and SQL, streamlining reporting processes and reducing turnaround time by 40%. </li>
-                <li>Built ETL workflows to integrate data from multiple internal and external data sources, ensuring data integrity, accuracy, and consistency across analytical products.</li>
-                <li>Conducted trend analysis, anomaly detection, and variance analysis, generating actionable insights that improved operational efficiency and resource allocation.</li>
-                <li>Designed and implemented data collection and reporting tools, translating analytical requirements into structured datasets that support reporting needs.</li>
-                <li>Performed spatial data analysis and mapping to visualize service coverage and performance patterns across project locations, supporting targeted interventions.</li>
-                <li>Developed data management documentation, including SOPs, data definitions, and process flows, contributing to strong data governance and repeatable BI practices.</li>
-                <li>Provided technical assistance to data users to improve data quality, support reporting activities, and ensure compliance with established processes.</li>
-                <li>Delivered training and user support on web and mobile-based information systems, enabling stakeholders to effectively access dashboards, reports, and analytics tools.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Data Management Officer</h4>
-              <h5>June 2023 - January 2024</h5>
-              <p><em>Save the Children</em></p>
-              <ul>
-                <li>Designed interactive visualizations using power-Bi and Tableau.</li>
-                <li>Designed and developed interactive dashboards using Power BI and Tableau to present KPIs, performance trends, and operational insights for decision-makers. </li>
-                <li>Built and optimized MySQL database structures, including tables and relationships to support reporting, analytics, and automated data flows.</li>
-                <li>Supported financial and program-level reporting systems, ensuring accuracy, consistency, and compliance with internal governance and donor requirements.</li>
-                <li>Developed data collection and reporting tools, translating business requirements into structured datasets suitable for analytics and dashboard development.</li>
-                <li>Wrote data processing scripts in STATA and Python to clean, transform, and analyze large datasets, improving data reliability and reducing manual effort.</li>
-                <li>Managed and monitored performance indicators and metrics, designing logical frameworks that connect inputs, outputs, outcomes, and impact for better reporting structure.</li>
-                <li>Implemented data validation, reconciliation, and QA processes to ensure data integrity prior to loading datasets into analytical dashboards.</li>
-                <li>Developed and maintained data management documentation, including Standard Operating Procedures (SOPs), data definitions, and guidance for handling sensitive data.</li>
-                <li>Collaborated with facility teams to identify data insights, trends, and visualization needs, ensuring analytical products directly support operational objectives.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Information Management Technical Officer</h4>
-              <h5>October 2020 - December 2023</h5>
-              <p><em>United Nations Development Programs (UNDP)</em></p>
-              <ul>
-                <li>Designed and developed Monitoring and Evaluation(M&E) systems.</li>
-                <li>Designed and developed NoSQL and SQL database instances for the project.</li>
-                <li>Developed Monitoring and Evaluation(M&E) implementation plans.</li>
-                <li>Designed project Monitoring and Evaluation(M&E) framework in collaboration with the Relief and Rehabilitation Officers.</li>
-                <li>Designed interactive visualizations such as maps and charts. </li>
-                <li>Gathered M&E system requirements from system users through system demonstrations, observations and prototyping.</li>  
-                <li>Wrote M&E system documentations such as system user guides, system requirements specifications and other technical documentations.</li>
-                <li>Provided technical supervision to assistant disaster officers in their daily activities in relation to information management.</li>
-                <li>Ensured systems effectiveness and efficiency through systems monitoring tools.</li>
-                <li>Collaboratively worked with the infographics specialists and GIS specialists in coming up with Monitoring and Evaluation (M&E) system features.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Data Officer</h4>
-              <h5>June 2017 - November 2019</h5>
-              <p><em>Lighthouse Trust, Kuunika Project </em></p>
-              <ul>
-                <li>Designed and developed information management systems.</li>
-                <li>Wrote Standard Operating Procedures (SOP) for the M&E tools.</li>
-                <li>Developed Routine Data Quality Assessment (RDQA) tool.</li>
-                <li>Conducted data quality assessments together with the medical team.</li>
-                <li>Designed project Monitoring and Evaluation(M&E) framework in collaboration with the medical team. </li>
-                <li>Designed and developed MySQL database and ODK/Kobo forms.</li>  
-                <li>Provided technical support to the medical team on data management.</li>
-                <li>Collaboratively worked with the medical team in coming up with new M&E systems.</li>
-                <li>Trained data clerks and medical team on how to use M&E tools.</li>
-                <li>Maintained integrity of the databases through frequent data cleaning.</li>
-                <li>Worked with facility data personnel to identify local data and visualizations to support service delivery.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>M and E Team Leader</h4>
-              <h5>January 2016 - Jun 2017</h5>
-              <p><em> Mèdecins Sans Frontières ‒ Belgium </em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Data Processing Officer</h4>
-              <h5>January 2013 - January 2016</h5>
-              <p><em> Mèdecins Sans Frontières ‒ France </em></p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Key Skills and Competencies</h2>
-        <p>With a foundation in data management and software development, I bring a diverse skill set to drive impactful solutions. 
-          My expertise spans data analysis, monitoring & evaluation, and interactive dashboard creation, with proficiency in tools like 
-          Power BI, Tableau, and MS Access. In addition, I possess strong programming abilities in Python and JavaScript, complemented by 
-          experience in database systems like MySQL and NoSQL. My commitment to user-centered design and agile methodologies ensures that 
-          my solutions are both functional and user-friendly, tailored to meet complex organizational needs. These skills, combined with 
-          strategic planning and a focus on data-driven insights, enable me to support meaningful decision-making and efficiency for organizations.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-database-fill"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Data Management</a></h4>
-              <p class="description"><i> Data Quality Assuarance, Data Integration and Centralization, Database Administration, Data Visualizations and Reporting, </i></p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-activity"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Data Analysis</a></h4>
-              <p class="description">Python, Stata, R, MS-Excel</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-pie-chart-fill"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Data Visualizations</a></h4>
-              <p class="description">Power-Bi, Tableau</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Software Development</a></h4>
-              <p class="description">PHP, JavaScript, NodeJs, VueJs, Quasar and Loopback</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0"><i class="bi bi-globe-europe-africa"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">GIS</a></h4>
-              <p class="description">ArcGIS and QGIS </p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0"><i class="bi bi-info-circle-fill"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Infographics</a></h4>
-              <p class="description">Adobe Photoshop, Adobe Illustrator, Gimp and Canva, </p>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Testimonials Section -->
-    <!-- <section id="testimonials" class="testimonials section light-background">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section> -->
-    <!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Thank you for visiting my portfolio! If you’re interested in collaborating, discussing potential opportunities, or 
-          learning more about my work, I’d love to hear from you. Whether you need support with data management, 
-          M&E strategies, software development, or web-based solutions, feel free to reach out. 
-          I’m always open to new challenges and exciting projects.</p><br/>
-
-        <p>Please contact me through the information below, and I will get back to you as soon as possible.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>P.O Box 32078, Blantyre, Malawi</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Me</h3>
-                  <p>+265 888 394 136 / + 265 999 394 136</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Me</h3>
-                  <p>franchidzi@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61952.96526012254!2d33.75136492701109!3d-13.955013546104327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d31ffc299805%3A0x4b7eb9f20a03ff9!2sLilongwe!5e0!3m2!1sen!2smw!4v1731158728620!5m2!1sen!2smw" 
-            frameborder="0" 
-            style="border:0; 
-            width: 100%; 
-            height: 320px;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-            <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form> -->
-          <!-- </div> -->
-          <!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
+  <nav class="navbar">
 
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Francis Chidziwisano</strong> <span>All Rights Reserved</span></p>
+
+      <div class="logo">
+        Francis
+  <!--      <span>M&E</span> -->
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://francis.chidziwisano.github.io/"> Francis Chidziwisano</a>
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#resume">Resume</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="btn-nav">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div class="hero-content">
+
+          <div class="hero-tagline">
+
+            <i class="fas fa-bolt"></i>
+
+            Data for impact · 10+ years
+
+          </div>
+
+
+          <h1>
+
+            Francis
+
+            <span class="highlight">
+              Chidziwisano
+            </span>
+
+          </h1>
+
+
+          <p class="hero-desc">
+
+            <strong>
+              Data Management · Monitoring & Evaluation ·
+              Data Analytics · Digital Solutions
+            </strong>
+
+            <br><br>
+
+            I build information systems, analytical workflows
+            and M&E solutions that help organisations transform
+            complex data into reliable evidence and better
+            decisions.
+
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              href="#contact"
+              class="btn-primary"
+            >
+
+              <i class="fas fa-paper-plane"></i>
+
+              Let's talk
+
+            </a>
+
+
+            <a
+              href="#resume"
+              class="btn-outline"
+            >
+
+              <i class="fas fa-file-lines"></i>
+
+              View experience
+
+            </a>
+
+          </div>
+
+
+          <div class="hero-stats">
+
+            <div>
+
+              <strong>10+</strong>
+
+              <span>
+                Years Experience
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>15+</strong>
+
+              <span>
+                Projects Supported
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>5+</strong>
+
+              <span>
+                Institutions / Organisations
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>1000K+</strong>
+
+              <span>
+                Records Managed
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- HERO IMAGE -->
+
+        <div class="hero-image">
+
+          <img
+            src="assets/img/my-profile-img.jpg"
+            alt="Francis Chidziwisano"
+            class="profile-img"
+            onerror="this.src='https://ui-avatars.com/api/?name=Francis+Chidziwisano&size=500&background=173f63&color=fff&bold=true'"
+          />
+
+
+          <div class="floating-badge badge-1">
+
+            <i
+              class="fas fa-chart-line"
+              style="color:#173f63;"
+            ></i>
+
+            Power BI · Tableau
+
+          </div>
+
+
+          <div class="floating-badge badge-2">
+
+            <i class="fas fa-code"></i>
+
+            Python · SQL · Digital Systems
+
+          </div>
+
+        </div>
+
       </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       ABOUT
+  ========================================================= -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="overline">
+          About
+        </span>
+
+        <h2>
+          Driven by data, focused on impact
+        </h2>
+
+        <p>
+          I combine technology, data and M&E expertise to help
+          development and health programmes generate better
+          evidence, improve performance and make informed decisions.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="about-card">
+
+          <div class="icon">
+
+            <i class="fas fa-globe-africa"></i>
+
+          </div>
+
+          <h3>
+            What I bring
+          </h3>
+
+          <p>
+            More than a decade of experience working with
+            programme data, information systems, monitoring
+            frameworks and analytical tools across health,
+            humanitarian and development settings.
+          </p>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="about-card">
+
+          <div class="icon">
+
+            <i class="fas fa-bullseye"></i>
+
+          </div>
+
+          <h3>
+            What I solve
+          </h3>
+
+          <p>
+            I help organisations address fragmented data,
+            inefficient reporting workflows, weak data quality
+            and limited visibility of programme performance
+            through practical digital and analytical solutions.
+          </p>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="about-card">
+
+          <div class="icon">
+
+            <i class="fas fa-link"></i>
+
+          </div>
+
+          <h3>
+            Let's connect
+          </h3>
+
+          <p>
+            Available for M&E, data management, analytics,
+            digital development, research and consulting
+            assignments.
+          </p>
+
+          <div class="link-list">
+
+            <a href="mailto:franchidzi@gmail.com">
+
+              <i class="fas fa-envelope"></i>
+
+              Email
+
+            </a>
+
+            <a href="#">
+
+              <i class="fab fa-linkedin"></i>
+
+              LinkedIn
+
+            </a>
+
+            <a href="#">
+
+              <i class="fab fa-github"></i>
+
+              GitHub
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       RESUME
+  ========================================================= -->
+
+  <section id="resume">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="overline">
+          Resume
+        </span>
+
+        <h2>
+          Experience & Education
+        </h2>
+
+        <p>
+          A career spanning data management, information systems,
+          M&E, analytics and digital solutions across health,
+          disaster management and development programmes.
+        </p>
+
+      </div>
+
+
+      <div class="resume-grid">
+
+
+        <!-- EXPERIENCE -->
+
+        <div class="resume-block">
+
+          <h3>
+
+            <i class="fas fa-briefcase"></i>
+
+            Professional Experience
+
+          </h3>
+
+
+          <!-- EXPERIENCE 1 -->
+
+          <div class="exp-item">
+
+            <h4>
+              Data Management Officer
+            </h4>
+
+            <div class="meta">
+
+              <span>
+                <i class="fas fa-calendar-alt"></i>
+                Feb 2024 – Mar 2025
+              </span>
+
+              <span>
+                <i class="fas fa-building"></i>
+                Feed the Children
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Managed programme data workflows supporting
+                routine monitoring, reporting and evidence generation.
+              </li>
+
+              <li>
+                Developed interactive Power BI and Qlik dashboards
+                for programme performance monitoring.
+              </li>
+
+              <li>
+                Automated data processing and ETL workflows using
+                Python and SQL.
+              </li>
+
+              <li>
+                Conducted data quality checks and strengthened
+                reporting reliability.
+              </li>
+
+            </ul>
+
+            <div class="impact-tags">
+
+              <span class="impact-tag">
+                Power BI
+              </span>
+
+              <span class="impact-tag">
+                Python
+              </span>
+
+              <span class="impact-tag">
+                SQL
+              </span>
+
+              <span class="impact-tag">
+                Data Quality
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- EXPERIENCE 2 -->
+
+          <div class="exp-item">
+
+            <h4>
+              Data Management Officer
+            </h4>
+
+            <div class="meta">
+
+              <span>
+                <i class="fas fa-calendar-alt"></i>
+                Jun 2023 – Jan 2024
+              </span>
+
+              <span>
+                <i class="fas fa-building"></i>
+                Save the Children
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Supported data collection, verification,
+                management and reporting across programme sites.
+              </li>
+
+              <li>
+                Designed Power BI and Tableau dashboards
+                for programme KPIs and performance monitoring.
+              </li>
+
+              <li>
+                Developed scripts for data cleaning and
+                transformation using Python and Stata.
+              </li>
+
+              <li>
+                Supported donor and programme reporting with
+                improved data accuracy and timeliness.
+              </li>
+
+            </ul>
+
+            <div class="impact-tags">
+
+              <span class="impact-tag">
+                Tableau
+              </span>
+
+              <span class="impact-tag">
+                Python
+              </span>
+
+              <span class="impact-tag">
+                Stata
+              </span>
+
+              <span class="impact-tag">
+                M&E
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- EXPERIENCE 3 -->
+
+          <div class="exp-item">
+
+            <h4>
+              Information Management Technical Officer
+            </h4>
+
+            <div class="meta">
+
+              <span>
+                <i class="fas fa-calendar-alt"></i>
+                Oct 2020 – Dec 2023
+              </span>
+
+              <span>
+                <i class="fas fa-building"></i>
+                UNDP
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Developed information management and reporting
+                solutions supporting disaster management.
+              </li>
+
+              <li>
+                Designed databases, analytical tools and
+                interactive visualisations.
+              </li>
+
+              <li>
+                Supported DoDMA information management and
+                evidence-based decision-making.
+              </li>
+
+              <li>
+                Supervised information management activities
+                and supported capacity strengthening.
+              </li>
+
+            </ul>
+
+            <div class="impact-tags">
+
+              <span class="impact-tag">
+                Information Management
+              </span>
+
+              <span class="impact-tag">
+                GIS
+              </span>
+
+              <span class="impact-tag">
+                Dashboards
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- EXPERIENCE 4 -->
+
+          <div class="exp-item">
+
+            <h4>
+              Data Officer
+            </h4>
+
+            <div class="meta">
+
+              <span>
+                <i class="fas fa-calendar-alt"></i>
+                Jun 2017 – Nov 2019
+              </span>
+
+              <span>
+                <i class="fas fa-building"></i>
+                Lighthouse Trust · Kuunika
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Designed M&E data collection tools using
+                ODK and KoboToolbox.
+              </li>
+
+              <li>
+                Developed and maintained MySQL databases.
+              </li>
+
+              <li>
+                Conducted data quality assessments and
+                supported health teams with data management.
+              </li>
+
+            </ul>
+
+            <div class="impact-tags">
+
+              <span class="impact-tag">
+                ODK
+              </span>
+
+              <span class="impact-tag">
+                KoboToolbox
+              </span>
+
+              <span class="impact-tag">
+                MySQL
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- EXPERIENCE 5 -->
+
+          <div class="exp-item">
+
+            <h4>
+              M&E Team Leader / Data Processing Officer
+            </h4>
+
+            <div class="meta">
+
+              <span>
+                <i class="fas fa-calendar-alt"></i>
+                2013 – 2017
+              </span>
+
+              <span>
+                <i class="fas fa-building"></i>
+                Médecins Sans Frontières
+              </span>
+
+            </div>
+
+            <ul>
+
+              <li>
+                Led M&E and data processing activities supporting
+                health programme implementation.
+              </li>
+
+              <li>
+                Supported routine monitoring, data verification,
+                reporting and evidence generation.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+        <!-- EDUCATION -->
+
+        <div class="resume-block">
+
+          <h3>
+
+            <i class="fas fa-graduation-cap"></i>
+
+            Education & Certifications
+
+          </h3>
+
+
+          <div class="exp-item">
+
+            <h4>
+              BSc in Information Technology
+            </h4>
+
+            <div class="meta">
+
+              <span>
+                <i class="fas fa-calendar"></i>
+                2015 – 2017
+              </span>
+
+              <span>
+                <i class="fas fa-building"></i>
+                National College of IT
+              </span>
+
+            </div>
+
+            <p style="font-size:.8rem;color:#60758a;">
+              Information technology, software development,
+              databases, systems analysis and computing.
+            </p>
+
+          </div>
+
+
+          <div class="exp-item">
+
+            <h4>
+              Advanced Diploma in Computing
+            </h4>
+
+            <div class="meta">
+
+              <span>
+                <i class="fas fa-calendar"></i>
+                2010 – 2014
+              </span>
+
+              <span>
+                <i class="fas fa-building"></i>
+                National College of IT
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div style="margin-top:28px;">
+
+            <h3 style="
+              font-size:1.05rem;
+              margin-bottom:15px;
+              padding-bottom:10px;
+            ">
+
+              <i class="fas fa-certificate"></i>
+
+              Selected Certifications
+
+            </h3>
+
+
+            <div class="exp-item">
+
+              <h4>
+                Applied Data Science
+              </h4>
+
+              <div class="meta">
+                In progress
+              </div>
+
+            </div>
+
+
+            <div class="exp-item">
+
+              <h4>
+                Machine Learning with Python
+              </h4>
+
+              <div class="meta">
+                December 2024
+              </div>
+
+            </div>
+
+
+            <div class="exp-item">
+
+              <h4>
+                PostgreSQL
+              </h4>
+
+              <div class="meta">
+                September 2023
+              </div>
+
+            </div>
+
+
+            <div class="exp-item">
+
+              <h4>
+                Data Science with Python
+              </h4>
+
+              <div class="meta">
+                March 2023
+              </div>
+
+            </div>
+
+
+            <div class="exp-item">
+
+              <h4>
+                Tableau / Data Visualisation
+              </h4>
+
+              <div class="meta">
+                2022 – 2023
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       SKILLS
+  ========================================================= -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="overline">
+          Core Competency
+        </span>
+
+        <h2>
+          Skills & Technologies
+        </h2>
+
+        <p>
+          A combination of data management, analytics,
+          visualisation, software development, GIS and
+          programme performance expertise.
+        </p>
+
+      </div>
+
+
+      <div class="skills-grid">
+
+
+        <!-- DATA MANAGEMENT -->
+
+        <div class="skill-card">
+
+          <i class="fas fa-database"></i>
+
+          <h4>
+            Data Management
+          </h4>
+
+          <p>
+            Designing reliable data workflows and
+            information systems.
+          </p>
+
+          <div class="skill-tags">
+
+            <span class="skill-tag">ETL</span>
+            <span class="skill-tag">QA</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Databases</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- ANALYTICS -->
+
+        <div class="skill-card">
+
+          <i class="fas fa-chart-pie"></i>
+
+          <h4>
+            Data Analysis
+          </h4>
+
+          <p>
+            Transforming raw information into analytical
+            insights and evidence.
+          </p>
+
+          <div class="skill-tags">
+
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Stata</span>
+            <span class="skill-tag">Excel</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- VISUALISATION -->
+
+        <div class="skill-card">
+
+          <i class="fas fa-chart-line"></i>
+
+          <h4>
+            Data Visualisation
+          </h4>
+
+          <p>
+            Designing dashboards and visual stories for
+            decision-makers.
+          </p>
+
+          <div class="skill-tags">
+
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Qlik</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- DEVELOPMENT -->
+
+        <div class="skill-card">
+
+          <i class="fas fa-code"></i>
+
+          <h4>
+            Software Development
+          </h4>
+
+          <p>
+            Developing digital tools and information
+            systems for real-world workflows.
+          </p>
+
+          <div class="skill-tags">
+
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Vue</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- GIS -->
+
+        <div class="skill-card">
+
+          <i class="fas fa-map-marked-alt"></i>
+
+          <h4>
+            GIS & Spatial Analysis
+          </h4>
+
+          <p>
+            Using geographic information to support
+            infrastructure and development decisions.
+          </p>
+
+          <div class="skill-tags">
+
+            <span class="skill-tag">QGIS</span>
+            <span class="skill-tag">ArcGIS</span>
+            <span class="skill-tag">Mapping</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- M&E -->
+
+        <div class="skill-card">
+
+          <i class="fas fa-bullseye"></i>
+
+          <h4>
+            M&E & Performance
+          </h4>
+
+          <p>
+            Strengthening programme monitoring, reporting,
+            data quality and evidence use.
+          </p>
+
+          <div class="skill-tags">
+
+            <span class="skill-tag">KPIs</span>
+            <span class="skill-tag">M&E</span>
+            <span class="skill-tag">Reporting</span>
+            <span class="skill-tag">DQAs</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       CONTACT
+  ========================================================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="overline">
+          Contact
+        </span>
+
+        <h2>
+          Let's work together
+        </h2>
+
+        <p>
+          Have a project, opportunity or data challenge?
+          Let's discuss how technology, evidence and
+          better information can help.
+        </p>
+
+      </div>
+
+
+      <div class="contact-wrap">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+          <h3>
+            Reach me directly
+          </h3>
+
+          <p class="contact-intro">
+            I'm available for short- and long-term assignments
+            involving M&E, data management, analytics,
+            research and digital solutions.
+          </p>
+
+
+          <div class="info-item">
+
+            <i class="fas fa-map-pin"></i>
+
+            <div>
+
+              <p>
+                P.O Box 32078<br>
+                Blantyre, Malawi
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <i class="fas fa-phone-alt"></i>
+
+            <div>
+
+              <p>
+                +265 888 394 136<br>
+                +265 999 394 136
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <i class="fas fa-envelope"></i>
+
+            <div>
+
+              <p>
+                franchidzi@gmail.com
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-socials">
+
+            <a href="#">
+
+              <i class="fab fa-linkedin"></i>
+
+              LinkedIn
+
+            </a>
+
+
+            <a href="#">
+
+              <i class="fab fa-github"></i>
+
+              GitHub
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="contact-form">
+
+          <form action="#" method="post">
+
+            <input
+              type="text"
+              placeholder="Your name"
+              required
+            />
+
+            <input
+              type="email"
+              placeholder="Email address"
+              required
+            />
+
+            <input
+              type="text"
+              placeholder="Subject"
+            />
+
+            <textarea
+              rows="5"
+              placeholder="Tell me about your project, opportunity or challenge..."
+            ></textarea>
+
+            <button
+              type="submit"
+              class="btn-primary"
+            >
+
+              <i class="fas fa-paper-plane"></i>
+
+              Send message
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <p>
+
+        © 2026
+
+        <span>
+          Francis Chidziwisano
+        </span>
+
+        · All rights reserved.
+
+      </p>
+
+      <p style="margin-top:4px;opacity:.65;">
+
+        Data · M&E · Analytics · Digital Solutions
+
+      </p>
+
     </div>
 
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================= -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    /* ---------------------------------------------------------
+       Smooth scrolling
+    --------------------------------------------------------- */
+
+    document
+      .querySelectorAll('a[href^="#"]')
+      .forEach(anchor => {
+
+        anchor.addEventListener("click", function(e) {
+
+          const href = this.getAttribute("href");
+
+          if (href === "#") return;
+
+          const target =
+            document.querySelector(href);
+
+          if (!target) return;
+
+          e.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        });
+
+      });
+
+
+    /* ---------------------------------------------------------
+       Scroll reveal
+    --------------------------------------------------------- */
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    document
+      .querySelectorAll(".about-card, .exp-item, .skill-card, .contact-wrap")
+      .forEach(element => {
+
+        element.classList.add("reveal");
+
+        observer.observe(element);
+
+      });
+
+
+  </script>
 
 </body>
-
 </html>
+```
